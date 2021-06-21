@@ -1,0 +1,1717 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900&display=swap');
+/*! HTML5 Boilerplate v7.1.0 | MIT License | https://html5boilerplate.com/ */
+/* main.css 1.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */ ::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+audio, canvas, iframe, img, svg, video {
+  vertical-align: middle;
+}
+/*
+ * Remove default fieldset styles.
+ */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+  resize: vertical;
+}
+legend {
+  width: auto;
+}
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+/*==========================================================================
+
+ESTILOS PERSONALIZADOS
+
+==========================================================================*/
+html, body {
+  height: 100%;
+  margin: 0;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  font-weight: 400;
+}
+body {
+  color: #6C7A87;
+  font-family: 'Work Sans', sans-serif;
+  overflow-x: hidden;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  color: #4D4D4D;
+  line-height: 1.1;
+}
+h1 {
+  font-size: 32px;
+}
+h2 {
+  font-size: 28px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 20px;
+}
+h5 {
+  font-size: 19px;
+}
+h6 {
+  font-size: 18px;
+}
+p, ol li, ul li {
+  font-size: 17px;
+  color: #6C7A87;
+  line-height: 1.2;
+}
+ol li, ul li {
+  margin-bottom: 5px;
+}
+ol, ul {
+  padding: 0 0 0 20px;
+}
+ol.text-white li, ul.text-white li {
+  color: white;
+}
+a, button {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+a:hover {
+  text-decoration: none;
+}
+strong {
+  font-weight: 700;
+  letter-spacing: .2px;
+}
+/*MENÚ LATERAL*/
+.trigger-menu {
+  position: fixed;
+  right: 20px;
+  top: 10%;
+  z-index: 100;
+}
+.trigger-menu a {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  color: #272E62;
+  font-size: 25px;
+}
+#menu-lateral {
+  position: fixed;
+  right: 2%;
+  bottom: 77px;
+  width: 150px;
+  z-index: 100;
+}
+#menu-lateral ul {
+  margin: 0;
+  padding: 30px 0;
+  list-style: none;
+  width: 100%;
+  border-right: solid 1px white;
+}
+#menu-lateral ul li {
+  background: url("../img/generales/circulo-menu-lateral.svg") no-repeat;
+  background-position-x: calc(100% - 5px);
+  background-position-y: 3px;
+  background-size: 19px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  margin-right: -15px;
+  text-align: right;
+}
+#menu-lateral ul li:last-child {
+  padding-bottom: 2px;
+}
+#menu-lateral ul li a {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: #272e62;
+  text-align: right;
+  text-transform: uppercase;
+}
+#menu-lateral a.home {
+  color: red;
+  top: -30px;
+  position: absolute;
+  right: -10px;
+  font-weight: 20px;
+}
+#menu-lateral a.home i {
+  width: 20px;
+  color: white;
+  cursor: pointer;
+}
+/*HEADER*/
+#main-header {
+  background: #101851;
+  height: 85px;
+  position: relative;
+}
+#main-header .container {}
+#main-header img {
+  max-height: 70px;
+}
+.logo-container {
+  background: white;
+  height: 85px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.logo-container:before {
+  content: "";
+  background: white;
+  height: 85px;
+  position: absolute;
+  width: 100%;
+  left: -100%;
+}
+
+/*SLIDER*/
+#banners-carrusel, #c1 {
+  position: relative;
+}
+.swiper-slide {
+  background-position: bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 100;
+}
+.swiper-slide:nth-child(1) {
+  background-image: url("../img/duotone (7).jpg");
+}
+.swiper-slide:nth-child(2) {
+  background-image: url("../img/bombillo_editado.jpg");
+}
+.swiper-slide:nth-child(3) {
+  background-image: url("../img/3.jpg");
+}
+#banners-carrusel p.botonera, #c1 p.botonera {
+  position: absolute;
+  bottom: 60px;
+  right: 15%;
+  z-index: 100;
+}
+#banners-carrusel p.botonera a, #c1 p.botonera a, p.botonera a {
+  background: white;
+  padding: 10px;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #1A519E;
+  font-weight: 600;
+  width: 150px;
+  display: inline-block;
+}
+#banners-carrusel p.botonera a:hover, #c1 p.botonera a:hover, p.botonera a:hover {
+  background: #1A519E;
+  color: white;
+}
+#banners-carrusel h1, #c1 h1 {
+  width: 30%;
+  color: white;
+  font-size: 70px;
+  line-height: 1;
+  font-weight: 600;
+  top: 70px;
+  position: absolute;
+}
+#banners-carrusel h2, #c1 h2 {
+  width: 35%;
+  color: white;
+  font-size: 50px;
+  line-height: 1;
+  font-weight: 600;
+}
+#banners-carrusel h2 img {
+  position: absolute;
+  top: 80px;
+  right: 20px;
+}
+#upper-menu {}
+#upper-menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  justify-content: space-around;
+  width: 100%;
+}
+#upper-menu ul li {
+  text-transform: uppercase;
+  line-height: 1;
+}
+#upper-menu ul li a {
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 400;
+}
+#upper-menu ul li img{
+
+
+}
+#upper-menu ul li a strong {
+  display: block;
+  font-weight: 700;
+}
+#upper-menu ul li a:hover {
+  opacity: .7;
+}
+#upper-menu ul li img {
+  display: block;
+  margin: 0 auto 3px;
+}
+#upper-menu ul li:nth-child(1) img {
+  height: 33px;
+  margin: 0 auto 0px;
+}
+#upper-menu ul li:nth-child(2) img {
+  height: 30px;
+}
+#upper-menu ul li:nth-child(3) img {
+  height: 27px;
+}
+#upper-menu ul li:nth-child(4) img {
+  height: 29px;
+}
+#upper-menu ul li:nth-child(5) img {
+  height: 39px;
+}
+/*Menú móvil*/
+#menuToggle {
+  display: none;
+}
+/*MAIN SLIDER*/
+#banners-carrusel {
+  height: calc(100vh - 164px);
+  position: relative;
+}
+.seccion-contenido {
+  min-height: calc(100vh - 162px);
+}
+#banners-carrusel {}
+#banners-carrusel {}
+#banners-carrusel {}
+.arrow-bounce {
+  position: absolute;
+  bottom: 30px;
+  left: calc(50% - 28px);
+  width: 56px;
+  height: 24px;
+  z-index: 10;
+}
+.arrow-bounce {
+  text-align: center;
+}
+.bounce {
+  -webkit-animation: bounce 2s 100;
+  animation: bounce 2s 100;
+}
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+
+@media (min-width: 992px) {
+  /*MOBILE MENU*/
+.menu-tab, .menu-hide {
+display:none;
+ /* end of div*/
+}
+}
+
+
+
+
+/*FOOTER*/
+#frontpage-footer {
+  height: 77px;
+  /*position: fixed;*/
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+  background: white;
+}
+#frontpage-footer .container {
+  height: 77px;
+}
+#frontpage-footer .footer-desktop {
+  max-width: 700px;
+}
+#frontpage-footer img {
+  margin-left: auto;
+  margin-right: auto;
+}
+#frontpage-footer p {
+  font-size: 10px;
+  margin-bottom: 2px;
+  color: #464642;
+  text-align: left;
+}
+#frontpage-footer a {
+  color: #17a2b8;
+}
+#frontpage-footer a:hover {
+  text-decoration: underline;
+}
+/*SECCIONES INICIO*/
+.seccion-inicio {
+  background-size: 40% auto;
+  background-position: top left;
+  background-repeat: no-repeat;
+  /*! padding-right: 140px; */
+  height: auto;
+  letter-spacing: -0.54px;
+  position: relative;
+  padding-top: 45px;
+  padding-bottom: 45px;
+  /*! margin-bottom: 80px; */
+}
+.seccion-inicio .titulo-parrafo {}
+.seccion-inicio h2 {
+  position: absolute;
+
+  margin-left: -2px;
+  top: 0;
+  left: calc(50% - 90px);
+  font-weight: bold;
+  width:25px;
+}
+.seccion-inicio h2 img {}
+.seccion-inicio .titulo-historia {
+  font-size: 50px;
+  color: white;
+  bottom: 30px;
+  left: 0;
+  position: absolute;
+}
+.seccion-inicio .titulo-historia a {
+  padding: 0;
+  text-align: left;
+  margin-bottom: 0;
+}
+.seccion-inicio h3 {
+  font-size: 50px;
+  color: white;
+  line-height: .9;
+  font-weight: 600;
+  width: 110%;
+}
+.seccion-inicio .destacado {
+  background: white;
+  padding: 15px 25px;
+  font-size: 17px;
+  line-height: 1.2;
+  color: #1A519E;
+  letter-spacing: -0.34px;
+  font-weight: 600;
+  margin-left: -45%;
+  padding-left: 6%;
+}
+.seccion-inicio .destacado p {
+  font-size: 18px;
+}
+.seccion-inicio .destacado p:last-child {
+  margin-bottom: 0;
+  color: #1A519E;
+  font-weight: 400;
+}
+.seccion-inicio .margen-izquierdo {
+  padding-left: 23%;
+}
+.seccion-inicio .padding-derecho {
+  padding-right: 80px;
+}
+/*SECCIÓN 1 - PROGRAMA*/
+.seccion-programa {
+  background-image: url("../img/duotone (8).jpg");
+  background-color: #DFEDFD;
+}
+/*SECCIÓN 2, 3 - EQUIDAD, EXCELENCIA*/
+.seccion-equidad, .seccion-excelencia {
+  color: white;
+}
+.seccion-equidad {
+  background-image: url("../img/duotone (9).jpg");
+  background-color: #1A519E;
+}
+.seccion-excelencia {
+  background-image: url("../img/duotone (10).jpg");
+  background-color: #FFC700;
+  margin-bottom: 77px;
+}
+
+.amarillo-bkg{  background-color: #FFC700;}
+
+.seccion-conectate{
+   background-image: url("../img/conectarse.jpg");
+  background-color:black;
+ 
+}
+.seccion-conectate .container2{
+  min-height: calc(100vh - 130px) !important;
+  display:flex;
+  align-items: center;
+}
+.seccion-equidad p {
+  color: white;
+}
+.seccion-excelencia p, .seccion-excelencia ol li, .seccion-excelencia ul li, .seccion-excelencia a {
+  color: #1a519e;
+}
+.seccion-equidad [class*="col-"], .seccion-excelencia [class*="col-"] {
+  position: relative;
+}
+
+
+.seccion-excelencia h2 {
+  color: #FF1D50;
+}
+.seccion-excelencia .table-bordered{
+max-width:650px;
+  color:#1a519e;
+    margin-left:auto;
+  margin-right:auto;
+   
+}
+
+.seccion-excelencia table.table-bordered{
+    border:solid 1px #1a519e;
+    margin-top:20px;
+  }
+.seccion-excelencia table.table-bordered > thead > tr > th{
+    border:solid 1px #1a519e;
+}
+.seccion-excelencia table.table-bordered > tbody > tr > td{
+   border:solid 1px #1a519e;
+  vertical-align: middle;
+}
+
+/*Botonera secundaria*/
+ul.botonera-secundaria {
+  list-style: none;
+  text-align: center;
+  position: relative;
+}
+ul.botonera-secundaria:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #1a519e;
+  right: calc(20% - 45px);
+  top: calc(50% - 1px);
+}
+ul.botonera-secundaria li:first-child {
+  margin-left: 0px;
+}
+ul.botonera-secundaria li {
+  display: inline-block;
+  max-width: 155px;
+  margin-left: 20px;
+}
+ul.botonera-secundaria li a {
+  background: #1a519e;
+  color: white;
+  border-radius: 40px;
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: .5px;
+  padding: 5px 25px;
+  border: solid 1px #1a519e;
+  z-index: 1000;
+}
+ul.botonera-secundaria li a:hover {
+  color: #f5d65c;
+}
+ul.lista-linea {
+  list-style: none;
+  padding-left: 0;
+}
+ul.lista-linea li {
+  position: relative;
+  padding-left: 15px;
+}
+ul.lista-linea li:before {
+  content: "-";
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+}
+
+.seccion-excelencia ul.lista-linea{
+ 
+position:relative;
+  padding-bottom:15px;
+}
+.seccion-excelencia ul.lista-linea:after{
+ 
+   content: "";
+  position: absolute;
+  display: block;
+  right: calc(100% - 10px);
+  bottom: 0;
+background:white;
+ height:7px;
+  width:100%;
+
+}
+.salarios-row{}
+.salarios{
+ display: flex;
+}
+.salarios p:first-child{
+
+ border-right:solid 2px #1a519e;
+ padding-right:10px;
+margin-right:10px;
+  font-size:25px;
+  max-height: 70px;
+}
+
+/*SECCIÓN EQUIPO*/
+
+.seccion-equipo {
+  background: url("../img/birrete.svg") no-repeat left calc(50% - 250px);
+ background-size:300px auto;
+  background-color: #f6faff;
+  padding-top:0;
+}
+
+.seccion-equipo h2 {
+  color: #1a519e;
+ /*left: calc(50% - 90px);*/
+ left:0;
+}
+
+.seccion-equipo .row p{
+ 
+ padding-top:30px;
+}
+
+.seccion-equipo img.primera{
+ 
+ max-width:320px;
+margin-left:100px;
+  margin-top:80px;
+}
+
+.seccion-equipo img.segunda{
+ 
+ max-width:450px;
+  margin:30px auto 0;
+  display: block;
+}
+
+.seccion-equipo .row img:nth-child(2){
+ 
+ padding-top:30px;
+}
+
+
+/*SECCIÓN CONÉCTATE*/
+.text-dark-blue {
+  color: #272e70 !important;
+}
+
+.text-blue {
+  color: #1A519E !important;
+}
+p .text-blue {
+  color: #1A519E !important;
+}
+.bg-dark-blue {
+  background: #1a519e !important;
+ color:white !important;
+}
+.text-gray {
+  color: #6c7a87 !important;
+}
+.text-yellow {
+  color: #ffc700 !important;
+}
+@media (max-width: 768px) {
+  ul.botonera-secundaria:before {
+    right: calc(40% - 50px);
+  }
+  .seccion-conectate{
+    background-image:url("../img/conectarse2.jpg");
+    background-size:100% auto !important;
+    background-position-y:0px !important;
+  }
+  .seccion-inicio {
+    background-size: 100% auto;
+    background-position: center top;
+    background-repeat: no-repeat;
+    min-height: calc(100vh - 77px);
+    padding-right: 0px;
+    font-size: 16px;
+    padding-top:450px;
+  }
+  .destacado{margin-left:0 !important;}
+  
+  .seccion-conectate .container2{
+  min-height: auto !important;
+display:block;
+    padding-bottom:40px;
+}
+  .seccion-inicio .titulo-parrafo {}
+  .seccion-inicio h2 {
+    left: 5%;
+    top: 30px;
+    font-size: 25px;
+    width:45px;
+  }
+ 
+  .seccion-inicio .titulo-historia {
+    bottom: 0px;
+    left: 60%;
+    position: absolute;
+    width: 40%;
+  }
+  .seccion-inicio h3 {
+    font-size: 25px;
+    right: 0;
+    left: 50%;
+    line-height: 1.1;
+  }
+  .seccion-inicio p, ol li, ul li {
+    font-size: 16px;
+  }
+  .seccion-inicio .destacado, .seccion-inicio .destacado p {
+    font-size: 18px;
+  }
+  .seccion-inicio .destacado p:last-child {
+    margin-bottom: 0;
+    color: #1A519E;
+    font-weight: 400;
+  }
+  .seccion-inicio .margen-izquierdo {
+    padding-left: 0%;
+  }
+  .seccion-inicio .padding-derecho {
+    padding-right: 0%;
+  }
+  /*SECCIÓN 1 - PROGRAMA*/
+  .seccion-programa {
+    background-image: url("../img/duotone (-1.jpg");
+    background-position: top center;
+  }
+  /*SECCIÓN 2 - EQUIDAD*/
+  .seccion-equidad {
+    background-image: url("../img/duotone (-2.jpg");
+  }
+  /*SECCIÓN 3 - EXCELENCIA*/
+  .seccion-excelencia {
+    background-image: url("../img/duotone (-3.jpg");
+  }
+  .seccion-excelencia h2 {
+    color: #Fef033;
+  }
+  /*SLIDER*/
+  .swiper-slide:nth-child(1) {
+    background-image: url("../img/duotone (7).jpg");
+  }
+  .swiper-slide:nth-child(2) {
+    background-image: url("../img/bombillo_editado-1.jpg");
+  }
+  .swiper-slide:nth-child(3) {
+    background-image: url("../img/huevo_editado-1.jpg");
+  }
+  .swiper-slide:nth-child(2), .swiper-slide:nth-child(3) {
+    display: block !important;
+  }
+  #banners-carrusel p.botonera {
+    position: absolute;
+    bottom: 90px;
+    right: 0%;
+    z-index: 100;
+    width: 100%;
+  }
+  #banners-carrusel p.botonera a {
+    background: white;
+    padding: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #1A519E;
+    font-weight: 600;
+    width: 150px;
+    display: inline-block;
+  }
+  #banners-carrusel h1 {
+    width: 40%;
+    color: white;
+    font-size: 60px;
+    line-height: 1;
+    font-weight: 600;
+    top: 70px;
+    position: absolute;
+  }
+  #banners-carrusel h1 img {
+    width: 250px;
+    height: auto;
+  }
+  #banners-carrusel h2 {
+    width: 60%;
+    color: white;
+    font-size: 40px;
+    line-height: 1;
+    font-weight: 600;
+    margin-top: 30px;
+  }
+  #banners-carrusel h2 img {
+    position: relative;
+    top: 20px;
+    left: 0;
+  }
+  /*Menú móvil*/
+  #menuToggle {
+    display: block;
+    position: absolute;
+    top: 120px;
+    right: 30px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+    z-index: 100;
+  }
+  #menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+    -webkit-touch-callout: none;
+  }
+  /*
+ * Just a quick hamburger
+ */
+  #menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #101851;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+  }
+  #menuToggle span:first-child {
+    transform-origin: 0% 0%;
+  }
+  #menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+  /* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+  #menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #fef033;
+  }
+  /*
+ * But let's hide the middle one.
+ */
+  #menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  /*
+ * Ohyeah and the last one should go the other direction
+ */
+  #menuToggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+  /*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+  #menu {
+    position: absolute;
+    width: 300px;
+    margin: -62px 0 0 -235px;
+    padding: 50px;
+    padding-top: 85px;
+    background: #101851;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+    transform-origin: 0% 0%;
+    transform: translate(100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    /*height: calc(100vh - 162px);*/
+  }
+  #menu li {
+    padding: 7px 0;
+    font-size: 20px;
+  }
+  #menu li a {
+    color: white;
+  }
+ 
+  /*
+ * And let's slide it in from the left
+ */
+  #menuToggle input:checked ~ ul {
+    transform: none;
+  }
+ 
+ 
+ /*MOBILE MENU*/
+
+.menu-tab {
+  width: 80px;
+  height: 70px;
+  position: absolute;
+  z-index: 100;
+  top: 100px;
+  right: 0px;
+  cursor: pointer;
+  transition: all .6s ease-in-out;
+  /*end of div*/
+}
+.menu-tab div {
+  width: 33px;
+  height: 4px;
+  background-color: #2d2d2d;
+  display: block;
+  margin: 5px 25px;
+  transition: all .6s ease-in-out;
+}
+.menu-tab div:nth-child(1) {
+  margin-top: 20px;
+}
+
+/*end of menu-tab*/
+.menu-tab.active {
+
+  transition: all 600ms ease-in-out;
+  background-color: #101851;
+}
+.menu-tab.active #one {
+  -webkit-transform: translateY(9px) rotate(-135deg);
+          transform: translateY(9px) rotate(-135deg);
+  transition: all .6s ease-in-out;
+  background-color: #e74c3c;
+}
+.menu-tab.active #two {
+  opacity: 0;
+  transition: .4s ease;
+}
+.menu-tab.active #three {
+  -webkit-transform: translateY(-9px) rotate(-45deg);
+          transform: translateY(-9px) rotate(-45deg);
+  transition: all .6s ease-in-out;
+  background-color: #e74c3c;
+}
+
+.menu-hide {
+  width: 280px;
+  top: -280px;
+  right:0;
+  position: absolute;
+  z-index: 10;
+  transition: all .6s ease-in-out;
+  /*end of nav*/
+}
+.menu-hide nav {
+  /*end of ul*/
+}
+.menu-hide nav ul {
+  /*end of li*/
+  padding:20px 30px;
+  margin-bottom:0;
+}
+.menu-hide nav ul li {
+
+  list-style-type: none;
+  
+padding:10px 0 ;
+
+  transition: all .5s ease;
+  font-size:17px;
+}
+.menu-hide nav ul li:hover {
+  background-color: #e74c3c;
+  transition: all .5s ease;
+}
+.menu-hide nav ul li a {
+
+  text-decoration: none;
+  color: #f1f1f1;
+  
+}
+
+/*end of menu-hide*/
+.menu-hide.show {
+  right: 0px;
+  background-color:#101851 ;
+  transition: all .6s ease-in-out;
+  top:100px;
+}
+
+  
+.seccion-equipo{
+    padding-top:30px;
+    background-size:230px;
+    background-position:left 20%;
+  }
+  
+      .seccion-equipo p.tablet{
+
+padding-left:70px;
+  }
+  
+  .seccion-equipo img.primera{
+ 
+ max-width:100% !important;
+margin-left:0px;
+  margin-top:0px;
+}
+ 
+ .salarios-row{
+  max-width: 500px;
+  margin-left:auto;
+  margin-right: auto;
+ }
+
+.seccion-excelencia .table-bordered{
+max-width:550px;
+
+   
+}
+}
+@media (max-width: 480px) {
+ #main-header{display: none !important;}
+  ul.botonera-secundaria li {
+    width: 140px;
+    margin-left: 10px;
+  }
+  ul.botonera-secundaria li a {
+    font-size: 13px;
+  }
+  p, ul li, ol li {
+    font-size: 14px;
+  }
+  /*HEADER*/
+  #main-header {
+    height: 55px;
+  }
+  #upper-menu ul {
+    align-items: start !important;
+  }
+  #upper-menu ul li a {
+    font-size: 7px;
+  }
+  #upper-menu ul li img {
+    margin: 0 auto 0px;
+  }
+  #upper-menu ul li:nth-child(1) img {
+    height: 14px;
+  }
+  #upper-menu ul li:nth-child(2) img {
+    height: 13px;
+  }
+  #upper-menu ul li:nth-child(3) img {
+    height: 12px;
+  }
+  #upper-menu ul li:nth-child(4) img {
+    height: 12px;
+  }
+  #upper-menu ul li:nth-child(5) img {
+    height: 17px;
+  }
+  /*MAIN SLIDER*/
+  #banners-carrusel {
+    height: calc(100vh - 90px);
+  }
+  .seccion-inicio {
+    background-size: 100% auto;
+    background-position: center top;
+    background-repeat: no-repeat;
+    min-height: calc(100vh - 100px);
+    padding-right: 0px;
+    font-size: 16px;
+    padding-top:220px;
+  }
+ 
+
+  .seccion-inicio .titulo-parrafo {}
+  .seccion-inicio h2 {
+    left: 5%;
+    top: 1.5%;
+    font-size: 16px;
+    letter-spacing: 3px;
+    width:30px !important;
+  }
+
+  .seccion-inicio .titulo-historia {
+    bottom: 0px;
+    left: 55%;
+    position: absolute;
+    width: 40%;
+  }
+  .seccion-equidad .titulo-historia {
+    bottom: -15px;
+  }
+  .seccion-inicio h3 {
+    font-size: 17px;
+    line-height: 1.1;
+    margin-top: -7px;
+  }
+  .seccion-inicio .titulo-historia a {
+    margin-left: -5px;
+  }
+  .seccion-inicio .titulo-historia img {
+    width: 50px;
+    height: 40px;
+  }
+  .seccion-inicio p {
+    font-size: 14px;
+  }
+  .seccion-inicio .destacado {
+    font-size: 13px;
+  }
+  .seccion-inicio .destacado p {
+    font-size: 12px;
+  }
+ 
+    .seccion-equipo{
+
+    padding-top:8%;
+      background-size:100px;
+      background-position:left 14.5%;
+  }
+  
+  .seccion-equipo img.primera{
+  margin-left:0 !important;
+    padding-left:50px;
+    margin-top:0 !important;
+  }  
+  
+  p.botonera a {
+    width: auto;
+  }
+  #frontpage-footer {
+    height: 100px;
+  }
+  #frontpage-footer .container {
+    height: 100px;
+  }
+  .arrow-bounce {
+    bottom: 40px;
+    left: calc(50% - 13px);
+    width: 26px;
+    height: 12px;
+  }
+  /*SLIDER*/
+  .swiper-slide:nth-child(1) {
+    background-image: url("../img/duotone (7).jpg");
+  }
+  .swiper-slide:nth-child(2) {
+    background-image: url("../img/bombillo_editado-1.jpg");
+  }
+  .swiper-slide:nth-child(3) {
+    background-image: url("../img/huevo_editado-1.jpg");
+  }
+  .swiper-slide:nth-child(2), .swiper-slide:nth-child(3) {
+    display: block !important;
+  }
+  #banners-carrusel p.botonera {
+    position: absolute;
+    bottom: 150px;
+    right: 0%;
+    z-index: 100;
+    width: 100%;
+  }
+  #banners-carrusel p.botonera a {
+    background: white;
+    padding: 10px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #1A519E;
+    font-weight: 600;
+    width: 95px;
+    display: inline-block;
+  }
+  #banners-carrusel p.conectate {
+    position: absolute;
+    bottom: 100px;
+    z-index: 100;
+    width: 100%;
+  }
+  #banners-carrusel p.conectate a {
+    background: #1A519E;
+    border: solid 2px white;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 15px 35px;
+  }
+  #banners-carrusel h1 {
+    width: 40%;
+    color: white;
+    font-size: 32px;
+    line-height: 1;
+    font-weight: 600;
+    top: 30px;
+    position: absolute;
+  }
+  #banners-carrusel h1 img {
+    width: 150px;
+    height: auto;
+  }
+  #banners-carrusel h2 {
+    width: 100%;
+    color: white;
+    font-size: 32px;
+    line-height: 1;
+    font-weight: 600;
+    margin-top: 30px;
+  }
+  #banners-carrusel h2 img {
+    position: relative;
+    top: 0px;
+    left: 0;
+    width: 150px;
+    height: auto;
+    display: block;
+  }
+  p.botonera {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .trigger-menu a {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    color: #272E62;
+    font-size: 20px;
+  }
+  #frontpage-footer a {
+    color: #1A519E;
+    font-size: 12px
+  }
+  /*Menú móvil*/
+  #menuToggle {
+    top: 30px;
+    right: 30px;
+  }
+  /*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+  #menu {
+    height: calc(100vh - 95px);
+  }
+  #menu li {
+    font-size: 17px;
+  }
+  /*
+ * And let's slide it in from the left
+ */
+  #menuToggle input:checked ~ ul {
+    transform: none;
+  }
+   #menu a {
+    color: white;
+    line-height:1.2;
+     display: block;
+  }
+    #menu a img{
+    color: white;
+
+    display: block;
+      margin:0 auto;
+       margin-bottom:5px;
+  }
+  .panel-default > .panel-heading + .panel-collapse > .panel-body img{
+max-width:100%;
+   height:auto;
+    }
+ 
+  /*MOBILE MENU*/
+
+.menu-tab {
+  width: 80px;
+  height: 70px;
+  position: absolute;
+  z-index: 100;
+  top: 15px;
+  right: 0px;
+  cursor: pointer;
+  transition: all .6s ease-in-out;
+  /*end of div*/
+}
+.menu-tab div {
+  width: 33px;
+  height: 4px;
+  background-color: #2d2d2d;
+  display: block;
+  margin: 5px 25px;
+  transition: all .6s ease-in-out;
+}
+.menu-tab div:nth-child(1) {
+  margin-top: 20px;
+}
+
+/*end of menu-tab*/
+.menu-tab.active {
+
+}
+.menu-tab.active #one {
+  -webkit-transform: translateY(9px) rotate(-135deg);
+          transform: translateY(9px) rotate(-135deg);
+  transition: all .6s ease-in-out;
+  background-color: #e74c3c;
+}
+.menu-tab.active #two {
+  opacity: 0;
+  transition: .4s ease;
+}
+.menu-tab.active #three {
+  -webkit-transform: translateY(-9px) rotate(-45deg);
+          transform: translateY(-9px) rotate(-45deg);
+  transition: all .6s ease-in-out;
+  background-color: #e74c3c;
+}
+
+.menu-hide {
+  height:100vh;top: -100vh;
+width:320px;
+ 
+}
+.menu-hide nav {
+  /*end of ul*/
+}
+.menu-hide nav ul {
+  /*end of li*/
+  padding:20px 30px;
+  margin-bottom:0;
+}
+.menu-hide nav ul li {
+
+  list-style-type: none;
+  
+padding:10px 0 ;
+
+  transition: all .5s ease;
+  font-size:17px;
+}
+.menu-hide nav ul li:hover {
+  background-color: #e74c3c;
+  transition: all .5s ease;
+}
+.menu-hide nav ul li a {
+
+  text-decoration: none;
+  color: #f1f1f1;
+  
+}
+
+/*end of menu-hide*/
+.menu-hide.show {
+  right: 0px;
+  background-color:#101851 ;
+  transition: all .6s ease-in-out;
+  top:0px;
+}
+}
+/*TEXTOS*/
+.txt-13 {
+  font-size: 13px !important;
+}
+.txt-15 {
+  font-size: 15px !important;
+}
+.txt-17 {
+  font-size: 17px !important;
+}
+.txt-20 {
+  font-size: 20px !important;
+}
+.txt-25 {
+  font-size: 25px !important;
+}
+.txt-35 {
+  font-size: 35px !important;
+}
+.txt-40 {
+  font-size: 40px !important;
+}
+.txt-45 {
+  font-size: 45px !important;
+}
+.txt-55 {
+  font-size: 55px !important;
+}
+.txt-60 {
+  font-size: 60px;
+}
+.txt-80 {
+  font-size: 80px;
+}
+@media (max-width: 575.98px) {
+  .txt-xs-15 {
+    font-size: 15px !important;
+  }
+  .txt-xs-35 {
+    font-size: 35px !important;
+  }
+  .txt-xs-40 {
+    font-size: 40px !important;
+  }
+  .txt-xs-45 {
+    font-size: 45px !important;
+  }
+  .txt-xs-55 {
+    font-size: 55px !important;
+  }
+  .txt-xs-60 {
+    font-size: 60px !important;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .txt-sm-15 {
+    font-size: 15px !important;
+  }
+  .txt-sm-35 {
+    font-size: 35px !important;
+  }
+  .txt-sm-40 {
+    font-size: 40px !important;
+  }
+  .txt-sm-45 {
+    font-size: 45px !important;
+  }
+  .txt-md-55 {
+    font-size: 55px !important;
+  }
+  .txt-sm-60 {
+    font-size: 60px !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .txt-md-15 {
+    font-size: 15px !important;
+  }
+  .txt-md-35 {
+    font-size: 35px !important;
+  }
+  .txt-md-40 {
+    font-size: 40px !important;
+  }
+  .txt-md-45 {
+    font-size: 45px !important;
+  }
+  .txt-md-55 {
+    font-size: 55px !important;
+  }
+  .txt-md-60 {
+    font-size: 60px !important;
+  }
+}
+@media (min-width: 992px) {
+  .txt-lg-15 {
+    font-size: 15px !important;
+  }
+  .txt-lg-35 {
+    font-size: 35px !important;
+  }
+  .txt-lg-40 {
+    font-size: 40px !important;
+  }
+  .txt-lg-45 {
+    font-size: 45px !important;
+  }
+  .txt-lg-55 {
+    font-size: 55px !important;
+  }
+  .txt-lg-60 {
+    font-size: 60px !important;
+  }
+}
+/*TEXT ALIGN*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .text-md-right {
+    text-align: right;
+  }
+}
+@media (min-width: 992px) {
+  .text-lg-right {
+    text-align: right;
+  }
+}
+/*ALTURAS*/
+@media (min-width: 992px) {
+  .height-lg-75 {
+    height: 75vh;
+  }
+}
+/*Z-INDEX*/
+.z-100 {
+  z-index: 100;
+}
+/*Fonts and text*/
+.semibold {
+  font-weight: 500;
+}
+.oswald {
+  font-family: "Oswald";
+}
+/*Backgrounds*/
+.bg-azul {
+  background: #44BBDD;
+}
+.bg-azul-claro {
+  background: #DFEDFD;
+}
+.bg-azul-claro h3, .bg-azul-claro p, .bg-azul-claro ol li, .bg-azul-claro ul li {
+  color: #1a519e !important;
+}
+.bg-white p, .bg-white ol li, .bg-white ul li {
+  color: #6c7a87;
+}
+/*Alturas*/
+.h-5 {
+  height: 5px;
+}
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Hide visually and from screen readers
+ */
+.hidden {
+  display: none !important;
+}
+/*
+* Hide only visually, but have it available for screen readers:
+* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+*
+* 1. For long content, line feeds are not interpreted as spaces and small width
+*    causes content to wrap 1 word per line:
+*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+*/
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap; /* 1 */
+}
+b /*
+* Extends the .visuallyhidden class to allow the element
+* to be focusable when navigated to via the keyboard:
+* https://www.drupal.org/node/897638
+*/
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+  white-space: inherit;
+}
+/*
+* Hide visually and from screen readers, but maintain layout
+*/
+.invisible {
+  visibility: hidden;
+}
+/*
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+*    `contenteditable` attribute is included anywhere else in the document.
+*    Otherwise it causes space to appear at the top and bottom of elements
+*    that receive the `clearfix` class.
+* 2. The use of `table` rather than `block` is only necessary if using
+*    `:before` to contain the top-margins of child elements.
+*/
+.clearfix:before, .clearfix:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+.clearfix:after {
+  clear: both;
+}
+
+
+/*******************************
+* Does not work properly if "in" is added after "collapse".
+* Get free snippets on bootpen.com
+*******************************/
+    .panel-group .panel {
+        border-radius: 0;
+        box-shadow: none;
+        border-color: #EEEEEE;
+    }
+
+    .panel-default > .panel-heading {
+        padding: 0;
+        border-radius: 0;
+        color: #fff;
+        background-color: #2C79DD;
+        border-color: #2C79DD;
+    }
+
+    .panel-title {
+        font-size: 18px;
+   
+    }
+
+    .panel-title > a {
+        display: block;
+        padding: 15px;
+        text-decoration: none;
+         color:white;
+    }
+
+    .more-less {
+        float: right;
+        color: #fff;
+    }
+
+    .panel-default > .panel-heading + .panel-collapse > .panel-body {
+        border-top-color: #EEEEEE;
+      padding:20px 0;
+    }
+
+/*tabs*/
+
+.nav-tabs {
+    border-bottom: 0px solid #dee2e6;
+    background: #4690ed;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: white;
+    background-color: rgba(0,0,0,0.2);
+    border-color: transparent;
+    border: none;
+    border-radius: 0;
+}
+.nav-tabs .nav-link,  .nav-tabs .nav-link:hover{
+
+    border: 0px solid transparent;
+    border-top-left-radius: 0rem;
+    border-top-right-radius: 0rem;
+    color: white;
+    text-transform: uppercase;
+  padding:15px 20px;
+  
+
+}
+.tab-content{background: #DFEDFD;
+
+
+padding:35px 35px;
+}
