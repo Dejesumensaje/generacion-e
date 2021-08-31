@@ -166,6 +166,8 @@ strong {
   bottom: 77px;
   width: 150px;
   z-index: 100;
+  background: rgba(255, 255, 255, 0.3);
+  background-blend-mode: hue;
 }
 #menu-lateral ul {
   margin: 0;
@@ -244,10 +246,10 @@ strong {
   z-index: 100;
 }
 .swiper-slide:nth-child(1) {
-  background-image: url("../img/duotone (7).jpg");
+  background-image: url("../img/home_1.png");
 }
 .swiper-slide:nth-child(2) {
-  background-image: url("../img/bombillo_editado.jpg");
+  background-image: url("../img/home_2.png");
 }
 .swiper-slide:nth-child(3) {
   background-image: url("../img/3.jpg");
@@ -515,7 +517,7 @@ display:none;
 }
 /*SECCIÓN 1 - PROGRAMA*/
 .seccion-programa {
-  background-image: url("../img/duotone (8).jpg");
+  background-image: url("../img/generacione_programa.gif");
   background-color: #DFEDFD;
 }
 /*SECCIÓN 2, 3 - EQUIDAD, EXCELENCIA*/
@@ -523,11 +525,11 @@ display:none;
   color: white;
 }
 .seccion-equidad {
-  background-image: url("../img/duotone (9).jpg");
+  background-image: url("../img/Equidad.gif");
   background-color: #1A519E;
 }
 .seccion-excelencia {
-  background-image: url("../img/duotone (10).jpg");
+  background-image: url("../img/Excelencia.gif");
   background-color: #FFC700;
   margin-bottom: 77px;
 }
@@ -535,7 +537,7 @@ display:none;
 .amarillo-bkg{  background-color: #FFC700;}
 
 .seccion-conectate{
-   background-image: url("../img/conectarse.jpg");
+   background-image: url("../img/conectate.png");
   background-color:black;
  
 }
